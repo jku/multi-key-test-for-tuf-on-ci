@@ -1,0 +1,66 @@
+{
+ "signatures": [
+  {
+   "keyid": "f3a803b94ea05cfd35bc8dd8c631d3b9daf1e490e18aa9c7d793d49eb5195801",
+   "sig": ""
+  }
+ ],
+ "signed": {
+  "_type": "root",
+  "consistent_snapshot": true,
+  "expires": "2025-04-02T10:53:24Z",
+  "keys": {
+   "abcd": {
+    "keytype": "sigstore-oidc",
+    "keyval": {
+     "identity": "https://github.com/jku/multi-key-test-for-tuf-on-ci/.github/workflows/online-sign.yml@refs/heads/main",
+     "issuer": "https://token.actions.githubusercontent.com"
+    },
+    "scheme": "Fulcio",
+    "x-tuf-on-ci-online-uri": "sigstore:"
+   },
+   "f3a803b94ea05cfd35bc8dd8c631d3b9daf1e490e18aa9c7d793d49eb5195801": {
+    "keytype": "ecdsa",
+    "keyval": {
+     "public": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE1wgTb0BVTvCiDlaPmnUfXOLubQMj\nUxjiafwKLMgiRD0fK+XLSKK6fJjrzNkZCIYG78AUmhbRskgJgOatWD+Z9w==\n-----END PUBLIC KEY-----\n"
+    },
+    "scheme": "ecdsa-sha2-nistp256",
+    "x-tuf-on-ci-keyowner": "@jku"
+   }
+  },
+  "roles": {
+   "root": {
+    "keyids": [
+     "f3a803b94ea05cfd35bc8dd8c631d3b9daf1e490e18aa9c7d793d49eb5195801"
+    ],
+    "threshold": 1
+   },
+   "snapshot": {
+    "keyids": [
+     "abcd"
+    ],
+    "threshold": 1,
+    "x-tuf-on-ci-expiry-period": 365,
+    "x-tuf-on-ci-signing-period": 60
+   },
+   "targets": {
+    "keyids": [
+     "f3a803b94ea05cfd35bc8dd8c631d3b9daf1e490e18aa9c7d793d49eb5195801"
+    ],
+    "threshold": 1
+   },
+   "timestamp": {
+    "keyids": [
+     "abcd"
+    ],
+    "threshold": 1,
+    "x-tuf-on-ci-expiry-period": 2,
+    "x-tuf-on-ci-signing-period": 1
+   }
+  },
+  "spec_version": "1.0.31",
+  "version": 1,
+  "x-tuf-on-ci-expiry-period": 365,
+  "x-tuf-on-ci-signing-period": 60
+ }
+}
